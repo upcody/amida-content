@@ -1,0 +1,29 @@
+arrowParens: "avoid"
+bracketSameLine: true
+bracketSpacing: true
+htmlWhitespaceSensitivity: "css"
+proseWrap: "preserve"
+quoteProps: "as-needed"
+semi: true
+singleAttributePerLine: false
+singleQuote: false
+trailingComma: "es5"
+useTabs: false
+plugins:
+  - "prettier-plugin-properties"
+  - "prettier-plugin-sh"
+overrides:
+  # JSON
+  - files: [".*rc"]
+    options:
+      parser: "json"
+      trailingComma: "es5"
+
+  # Properties
+  - files:
+      - ".env"
+      - "*.env"
+      - "*.properties"
+    options:
+      parser: "dot-properties"
+      keySeparator: "="

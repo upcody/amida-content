@@ -1,0 +1,5 @@
+# https://www.aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git/
+# update existing line endings in your working tree
+# git rm --cached -r .
+# git reset --hard
+* text=auto eol=lf

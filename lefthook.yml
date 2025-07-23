@@ -1,0 +1,24 @@
+# https://lefthook.dev/configuration/
+colors: false
+pre-commit:
+  parallel: true
+  jobs:
+    - name: "typescript"
+      run: npx tsc-files --noEmit {staged_files}
+      glob:
+        - "*.js"
+        - "*.mjs"
+        - "*.cjs"
+        - "*.jsx"
+        - "*.ts"
+        - "*.mts"
+        - "*.cts"
+        - "*.tsx"
+
+    - name: "prettier"
+      run: npx prettier --write --ignore-unknown {staged_files}
+      glob: "*"
+
+    - name: "biome"
+      run: npx biome check --write --unsafe --colors=off --no-errors-on-unmatched {staged_files}
+      glob: "*"

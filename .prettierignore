@@ -1,0 +1,17 @@
+# exclude folders
+.idea
+
+# exclude file types
+*.ico
+*.jpeg
+*.jpg
+*.png
+*.svg
+
+# exclude files
+*-lock.json
+*-lock.yaml
+.editorconfig
+
+# exclude comments
+\#*
